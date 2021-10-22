@@ -1,0 +1,629 @@
+[2021-10-21 12:49:13,456] {processor.py:163} INFO - Started process (PID=26786) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:49:13,456] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:49:13,456] {logging_mixin.py:109} INFO - [2021-10-21 12:49:13,456] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:49:14,952] {logging_mixin.py:109} INFO - [2021-10-21 12:49:14,945] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2434, in load_table_from_file
+    response = self._do_multipart_upload(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2973, in _do_multipart_upload
+    response = upload.transmit(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/requests/upload.py", line 154, in transmit
+    return _helpers.wait_and_retry(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_helpers.py", line 182, in wait_and_retry
+    response = func()
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/requests/upload.py", line 150, in retriable_request
+    self._process_response(result)
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_upload.py", line 113, in _process_response
+    _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_helpers.py", line 100, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 33, in upload
+    job = client.load_table_from_dataframe(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2681, in load_table_from_dataframe
+    return self.load_table_from_file(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2438, in load_table_from_file
+    raise exceptions.from_http_response(exc.response)
+google.api_core.exceptions.NotFound: 404 POST https://bigquery.googleapis.com/upload/bigquery/v2/projects/directed-craft-329708/jobs?uploadType=multipart: Not found: Dataset directed-craft-329708:9fwr_asdaf_test
+[2021-10-21 12:49:14,982] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:49:14,985] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 1.530 seconds
+[2021-10-21 12:49:40,550] {processor.py:163} INFO - Started process (PID=26861) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:49:40,550] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:49:40,550] {logging_mixin.py:109} INFO - [2021-10-21 12:49:40,550] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:49:42,023] {logging_mixin.py:109} INFO - [2021-10-21 12:49:42,022] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2434, in load_table_from_file
+    response = self._do_multipart_upload(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2973, in _do_multipart_upload
+    response = upload.transmit(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/requests/upload.py", line 154, in transmit
+    return _helpers.wait_and_retry(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_helpers.py", line 182, in wait_and_retry
+    response = func()
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/requests/upload.py", line 150, in retriable_request
+    self._process_response(result)
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_upload.py", line 113, in _process_response
+    _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_helpers.py", line 100, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 33, in upload
+    job = client.load_table_from_dataframe(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2681, in load_table_from_dataframe
+    return self.load_table_from_file(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2438, in load_table_from_file
+    raise exceptions.from_http_response(exc.response)
+google.api_core.exceptions.NotFound: 404 POST https://bigquery.googleapis.com/upload/bigquery/v2/projects/directed-craft-329708/jobs?uploadType=multipart: Not found: Dataset directed-craft-329708:9fwr_asdaf_test
+[2021-10-21 12:49:42,036] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:49:42,038] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 1.489 seconds
+[2021-10-21 12:50:57,211] {processor.py:163} INFO - Started process (PID=26972) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:50:57,212] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:50:57,212] {logging_mixin.py:109} INFO - [2021-10-21 12:50:57,212] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:50:58,833] {logging_mixin.py:109} INFO - [2021-10-21 12:50:58,825] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2434, in load_table_from_file
+    response = self._do_multipart_upload(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2973, in _do_multipart_upload
+    response = upload.transmit(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/requests/upload.py", line 154, in transmit
+    return _helpers.wait_and_retry(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_helpers.py", line 182, in wait_and_retry
+    response = func()
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/requests/upload.py", line 150, in retriable_request
+    self._process_response(result)
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_upload.py", line 113, in _process_response
+    _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/resumable_media/_helpers.py", line 100, in require_status_code
+    raise common.InvalidResponse(
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 33, in upload
+    job = client.load_table_from_dataframe(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2681, in load_table_from_dataframe
+    return self.load_table_from_file(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 2438, in load_table_from_file
+    raise exceptions.from_http_response(exc.response)
+google.api_core.exceptions.NotFound: 404 POST https://bigquery.googleapis.com/upload/bigquery/v2/projects/directed-craft-329708/jobs?uploadType=multipart: Not found: Dataset directed-craft-329708:9fwr_asdaf_test
+[2021-10-21 12:50:58,865] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:50:58,869] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 1.659 seconds
+[2021-10-21 12:51:41,856] {processor.py:163} INFO - Started process (PID=27021) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:51:41,857] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:51:41,857] {logging_mixin.py:109} INFO - [2021-10-21 12:51:41,857] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:51:42,778] {logging_mixin.py:109} INFO - [2021-10-21 12:51:42,772] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:51:42,796] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:51:42,798] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.943 seconds
+[2021-10-21 12:51:59,302] {processor.py:163} INFO - Started process (PID=27048) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:51:59,303] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:51:59,303] {logging_mixin.py:109} INFO - [2021-10-21 12:51:59,303] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:51:59,956] {logging_mixin.py:109} INFO - [2021-10-21 12:51:59,954] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:51:59,971] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:51:59,973] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.672 seconds
+[2021-10-21 12:53:14,015] {processor.py:163} INFO - Started process (PID=27140) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:53:14,016] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:53:14,017] {logging_mixin.py:109} INFO - [2021-10-21 12:53:14,017] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:53:14,881] {logging_mixin.py:109} INFO - [2021-10-21 12:53:14,878] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:53:14,897] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:53:14,899] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.885 seconds
+[2021-10-21 12:53:57,872] {processor.py:163} INFO - Started process (PID=27189) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:53:57,873] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:53:57,873] {logging_mixin.py:109} INFO - [2021-10-21 12:53:57,873] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:53:58,829] {logging_mixin.py:109} INFO - [2021-10-21 12:53:58,826] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:53:58,844] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:53:58,846] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.975 seconds
+[2021-10-21 12:54:39,509] {processor.py:163} INFO - Started process (PID=27243) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:54:39,509] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:54:39,509] {logging_mixin.py:109} INFO - [2021-10-21 12:54:39,509] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:54:40,299] {logging_mixin.py:109} INFO - [2021-10-21 12:54:40,296] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:54:40,313] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:54:40,315] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.807 seconds
+[2021-10-21 12:55:25,733] {processor.py:163} INFO - Started process (PID=27295) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:55:25,734] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:55:25,734] {logging_mixin.py:109} INFO - [2021-10-21 12:55:25,734] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:55:26,518] {logging_mixin.py:109} INFO - [2021-10-21 12:55:26,515] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:55:26,531] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:55:26,534] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.802 seconds
+[2021-10-21 12:56:08,283] {processor.py:163} INFO - Started process (PID=27342) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:56:08,283] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:56:08,283] {logging_mixin.py:109} INFO - [2021-10-21 12:56:08,283] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:56:09,076] {logging_mixin.py:109} INFO - [2021-10-21 12:56:09,072] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:56:09,088] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:56:09,090] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.809 seconds
+[2021-10-21 12:56:52,204] {processor.py:163} INFO - Started process (PID=27399) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:56:52,205] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:56:52,205] {logging_mixin.py:109} INFO - [2021-10-21 12:56:52,205] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:56:53,158] {logging_mixin.py:109} INFO - [2021-10-21 12:56:53,155] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:56:53,175] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:56:53,178] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.974 seconds
+[2021-10-21 12:57:36,579] {processor.py:163} INFO - Started process (PID=27460) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:57:36,579] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:57:36,579] {logging_mixin.py:109} INFO - [2021-10-21 12:57:36,579] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:57:37,380] {logging_mixin.py:109} INFO - [2021-10-21 12:57:37,377] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:57:37,393] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:57:37,395] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.818 seconds
+[2021-10-21 12:58:24,425] {processor.py:163} INFO - Started process (PID=27512) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:58:24,426] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:58:24,426] {logging_mixin.py:109} INFO - [2021-10-21 12:58:24,426] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:58:25,229] {logging_mixin.py:109} INFO - [2021-10-21 12:58:25,227] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:58:25,242] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:58:25,244] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.820 seconds
+[2021-10-21 12:59:08,028] {processor.py:163} INFO - Started process (PID=27568) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:59:08,029] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:59:08,029] {logging_mixin.py:109} INFO - [2021-10-21 12:59:08,029] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:59:08,749] {logging_mixin.py:109} INFO - [2021-10-21 12:59:08,744] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:59:08,768] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:59:08,770] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.744 seconds
+[2021-10-21 12:59:53,361] {processor.py:163} INFO - Started process (PID=27617) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:59:53,362] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 12:59:53,362] {logging_mixin.py:109} INFO - [2021-10-21 12:59:53,362] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:59:53,975] {logging_mixin.py:109} INFO - [2021-10-21 12:59:53,973] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 12:59:53,989] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 12:59:53,991] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.631 seconds
+[2021-10-21 13:00:40,676] {processor.py:163} INFO - Started process (PID=27666) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:00:40,677] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:00:40,677] {logging_mixin.py:109} INFO - [2021-10-21 13:00:40,677] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:00:41,521] {logging_mixin.py:109} INFO - [2021-10-21 13:00:41,518] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:00:41,537] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:00:41,539] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.864 seconds
+[2021-10-21 13:01:26,596] {processor.py:163} INFO - Started process (PID=27713) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:01:26,597] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:01:26,598] {logging_mixin.py:109} INFO - [2021-10-21 13:01:26,598] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:01:27,381] {logging_mixin.py:109} INFO - [2021-10-21 13:01:27,379] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:01:27,394] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:01:27,397] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.801 seconds
+[2021-10-21 13:02:11,622] {processor.py:163} INFO - Started process (PID=27787) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:02:11,622] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:02:11,623] {logging_mixin.py:109} INFO - [2021-10-21 13:02:11,623] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:02:12,569] {logging_mixin.py:109} INFO - [2021-10-21 13:02:12,565] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:02:12,583] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:02:12,586] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.965 seconds
+[2021-10-21 13:02:56,868] {processor.py:163} INFO - Started process (PID=27846) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:02:56,869] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:02:56,869] {logging_mixin.py:109} INFO - [2021-10-21 13:02:56,869] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:02:57,727] {logging_mixin.py:109} INFO - [2021-10-21 13:02:57,723] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:02:57,741] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:02:57,743] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.877 seconds
+[2021-10-21 13:03:40,864] {processor.py:163} INFO - Started process (PID=27897) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:03:40,866] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:03:40,866] {logging_mixin.py:109} INFO - [2021-10-21 13:03:40,866] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:03:41,732] {logging_mixin.py:109} INFO - [2021-10-21 13:03:41,729] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:03:41,746] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:03:41,749] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.885 seconds
+[2021-10-21 13:04:25,403] {processor.py:163} INFO - Started process (PID=27954) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:04:25,404] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:04:25,404] {logging_mixin.py:109} INFO - [2021-10-21 13:04:25,404] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:04:26,163] {logging_mixin.py:109} INFO - [2021-10-21 13:04:26,161] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:04:26,176] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:04:26,178] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.776 seconds
+[2021-10-21 13:05:11,081] {processor.py:163} INFO - Started process (PID=27999) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:05:11,083] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:05:11,083] {logging_mixin.py:109} INFO - [2021-10-21 13:05:11,083] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:05:11,853] {logging_mixin.py:109} INFO - [2021-10-21 13:05:11,850] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:05:11,870] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:05:11,872] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.792 seconds
+[2021-10-21 13:05:57,218] {processor.py:163} INFO - Started process (PID=28082) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:05:57,219] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:05:57,219] {logging_mixin.py:109} INFO - [2021-10-21 13:05:57,219] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:05:58,030] {logging_mixin.py:109} INFO - [2021-10-21 13:05:58,028] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:05:58,044] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:05:58,045] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.828 seconds
+[2021-10-21 13:06:43,097] {processor.py:163} INFO - Started process (PID=28165) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:06:43,097] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:06:43,097] {logging_mixin.py:109} INFO - [2021-10-21 13:06:43,097] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:06:43,858] {logging_mixin.py:109} INFO - [2021-10-21 13:06:43,856] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:06:43,874] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:06:43,877] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.781 seconds
+[2021-10-21 13:07:26,762] {processor.py:163} INFO - Started process (PID=28215) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:07:26,763] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:07:26,763] {logging_mixin.py:109} INFO - [2021-10-21 13:07:26,763] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:07:27,908] {logging_mixin.py:109} INFO - [2021-10-21 13:07:27,905] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:07:27,921] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:07:27,923] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 1.162 seconds
+[2021-10-21 13:08:11,859] {processor.py:163} INFO - Started process (PID=28282) to work on /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:08:11,859] {processor.py:620} INFO - Processing file /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py for tasks to queue
+[2021-10-21 13:08:11,860] {logging_mixin.py:109} INFO - [2021-10-21 13:08:11,860] {dagbag.py:500} INFO - Filling up the DagBag from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:08:12,677] {logging_mixin.py:109} INFO - [2021-10-21 13:08:12,673] {dagbag.py:334} ERROR - Failed to import: /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py", line 13, in <module>
+    from get_data_wErr import upload
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 40, in <module>
+    upload()
+  File "/Users/cesareborgia/Desktop/9fwr/airflow/dags/get_data_wErr.py", line 22, in upload
+    df_up = df.melt(id_vars=['Coury'],var_name='Date',value_name='Confirmed')
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/frame.py", line 8339, in melt
+    return melt(
+  File "/opt/anaconda3/envs/af2/lib/python3.8/site-packages/pandas/core/reshape/melt.py", line 82, in melt
+    raise KeyError(
+KeyError: "The following 'id_vars' are not present in the DataFrame: ['Coury']"
+[2021-10-21 13:08:12,693] {processor.py:634} WARNING - No viable dags retrieved from /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py
+[2021-10-21 13:08:12,695] {processor.py:171} INFO - Processing /Users/cesareborgia/Desktop/9fwr/airflow/dags/csv_2_bigquery_wErr.py took 0.837 seconds
