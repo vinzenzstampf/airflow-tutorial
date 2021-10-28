@@ -10,7 +10,7 @@ from airflow.operators.python import PythonOperator
 # These args will get passed on to each operator
 # You can override them on a per-task basis during operator initialization
 
-from get_data import upload
+from get_data_incr import upload_append
 
 default_args = {
     'owner': 'airflow',
@@ -35,13 +35,14 @@ default_args = {
     # 'trigger_rule': 'all_success'
 }
 with DAG(
-    'bigquery',
+    'bigquery_incr',
     default_args=default_args,
-    description='loading a dataset from csv to bigquery via a python script',
-    schedule_interval=timedelta(days=1),
-    start_date=datetime(2021, 1, 1),
+    description='loading a dataset ',#XXXXfrom csv to bigquery via a python script',
+    # schedule_interval=timedelta(days=1),
+    schedule_interval=timedelta(hours=12),
+    start_date=datetime(2021, 10, 28),
     catchup=False,
-    tags=['example'],
+    tags=['airflow_tut'],
 ) as dag:
 
     # t1, t2 and t3 are examples of tasks created by instantiating operators
@@ -82,8 +83,8 @@ with DAG(
     # )
 
     t3 = PythonOperator(
-        task_id='upload',
-        python_callable=upload,
+        task_id='upload_incremental',
+        python_callable=upload_append,
         depends_on_past=False,
     )
 

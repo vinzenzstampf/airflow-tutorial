@@ -9,7 +9,7 @@ from google.oauth2 import service_account
 
 
 def upload():
-    key_path = '/Users/cesareborgia/Desktop/9fwr/airflow_use_case/google.key.json'
+    key_path = '/Users/cesareborgia/Desktop/9fwr/airflow/google.key.json'
 
     env["GOOGLE_APPLICATION_CREDENTIALS"]=key_path
 
